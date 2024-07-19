@@ -2,11 +2,14 @@
 import BaseLayout from "@/layouts/baseLayout.astro";
 import GibberishText from "@/components/text/gibberish-text";
 import SkewImage from "@/components/image/skew-image";
+import OrbitingItems from "@/components/list/orbiting-items.astro";
+
+import { ICONS } from "@/lib/constants";
 ---
 
 <BaseLayout>
   <section class="bg-black h-screen w-full">
-    <div class="grid grid-cols-2 items-center py-8 justify-center gap-1">
+    <div class="grid grid-cols-2 items-center py-8 gap-8 justify-center gap-1">
       <div class="justify-self-center relative z-30">
         <SkewImage alt="Me" src="./me.jpg" />
       </div>
@@ -35,6 +38,10 @@ import SkewImage from "@/components/image/skew-image";
             client:load
           />
         </h5>
+      </div>
+      <div class="col-span-2 justify-self-center py-8 pt-44">
+        <h3 class="text-white text-4xl font-bold text-center">What I&apos;ve Learned So Far...</h3>
+        <OrbitingItems items={ICONS} radius={50} />
       </div>
     </div>
   </section>
