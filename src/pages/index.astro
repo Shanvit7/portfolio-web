@@ -1,6 +1,6 @@
 ---
-import BaseLayout from "../layouts/baseLayout.astro";
-import BlurryBlob from "../components/blurry-bob";
+import BaseLayout from "@/layouts/baseLayout.astro";
+import GibberishText from "@/components/gibberish-text";
 ---
 
 <html lang="en">
@@ -13,12 +13,10 @@ import BlurryBlob from "../components/blurry-bob";
   </head>
   <body>
     <BaseLayout>
-      <section class="w-full h-full bg-black overflow-hidden">
-        <BlurryBlob
-          className="rounded-xl opacity-45"
-          firstBlobColor="bg-purple-400"
-          secondBlobColor="bg-blue-400"
-        />
+      <section class="bg-black h-screen w-screen overflow-hidden">
+        <h1 class="text-center w-full py-4">
+          <GibberishText className="text-3xl text-white" text="Front End Developer" client:load/>
+        </h1>
       </section>
     </BaseLayout>
   </body>

@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { cn } from "../lib/utils";
-import type { TabProps } from "../lib/types";
+import { cn } from "@/lib/utils";
+import type { TabProps } from "@/lib/types";
 
 const Tab = ({ text, selected, setSelected }: TabProps) => {
   return (
@@ -29,7 +29,7 @@ const TopNavbar = ({ tabs }: { tabs: string[] }) => {
   const [selected, setSelected] = useState<string>(tabs[0]);
 
   return (
-    <nav className="absolute w-full p-2">
+    <nav className="bg-black py-2">
       <div className="flex flex-wrap items-center justify-center gap-4 mx-auto p-4 bg-white/10 rounded-lg shadow-lg w-1/2">
         {tabs.map((tab) => (
           <Tab

@@ -1,7 +1,9 @@
 ---
-import TopNavbar from "../components/top-navbar";
-import { TABS } from '../lib/constants';
+import TopNavbar from "@/components/top-navbar";
+import BlurryBlob from "@/components/blurry-bob";
+import { TABS } from "@/lib/constants";
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -10,8 +12,13 @@ import { TABS } from '../lib/constants';
     <meta name="generator" content={Astro.generator} />
     <title>Front End Developer</title>
   </head>
-  <body>
-    <TopNavbar tabs={TABS}  client:load/>
+  <body class="overflow-x-hidden">
+    <BlurryBlob
+      className="rounded-xl opacity-45"
+      firstBlobColor="bg-purple-400"
+      secondBlobColor="bg-blue-400"
+    />
+    <TopNavbar tabs={TABS} client:load />
     <slot />
   </body>
 </html>

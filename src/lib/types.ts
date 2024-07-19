@@ -11,3 +11,7 @@ export interface BlobProps extends HTMLAttributes<HTMLDivElement> {
     secondBlobColor: string;
 };
   
+export interface GibberishTextProps {
+    text: string;
+    className?: string;
+};
