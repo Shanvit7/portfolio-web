@@ -7,7 +7,7 @@ const BlurryBlob = ({
   secondBlobColor,
 }: BlobProps) => {
   return (
-    <div className="relative flex z-10 items-center justify-center">
+    <div className="fixed w-1/3 top-1/4 right-1/2 flex z-10 items-center justify-center">
       <div className="relative w-full max-w-lg">
         <div
           className={cn(

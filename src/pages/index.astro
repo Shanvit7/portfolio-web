@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/baseLayout.astro";
 import GibberishText from "@/components/gibberish-text";
+import SkewImage from "@/components/image/skew-image";
 ---
 
 <html lang="en">
@@ -13,10 +14,38 @@ import GibberishText from "@/components/gibberish-text";
   </head>
   <body>
     <BaseLayout>
-      <section class="bg-black h-screen w-screen overflow-hidden">
-        <h1 class="text-center w-full py-4">
-          <GibberishText className="text-3xl text-white" text="Front End Developer" client:load/>
-        </h1>
+      <section class="bg-black h-screen w-full">
+        <div class="grid grid-cols-2 items-center py-8 justify-center gap-1">
+          <div class="justify-self-center relative z-50">
+            <SkewImage alt="Me" src="./me.jpg" />
+          </div>
+          <div>
+            <h1 class="py-4">
+              <GibberishText
+                className="text-3xl text-white"
+                text="Hi, I am Shanvit"
+                client:load
+              />
+            </h1>
+            <h5 class="text-lg">
+              <GibberishText
+                className="text-white"
+                text="I specialize in creating modern, user-friendly web interfaces"
+                client:load
+              />
+              <GibberishText
+                className="text-white"
+                text="that bridge the gap between design &"
+                client:load
+              />
+              <GibberishText
+                className="text-white"
+                text="functionality."
+                client:load
+              />
+            </h5>
+          </div>
+        </div>
       </section>
     </BaseLayout>
   </body>
