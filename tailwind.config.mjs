@@ -7,24 +7,10 @@ export default {
         foreground: "hsl(var(--foreground))",
       },
       keyframes: {
-        "pop-blob": {
-          "0%": { transform: "scale(1)" },
-          "33%": { transform: "scale(1.2)" },
-          "66%": { transform: "scale(0.8)" },
-          "100%": { transform: "scale(1)" },
+        "rotate-full": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
         },
-        colors: {
-          filter: {
-            "blur-20": "blur(20px)",
-            "blur-25": "blur(25px)",
-          },
-        },
-      },
-    },
-  },
-  theme: {
-    extend: {
-      keyframes: {
         "pop-blob": {
           "0%": { transform: "scale(1)" },
           "33%": { transform: "scale(1.2)" },

@@ -1,13 +1,11 @@
-import type { ImgHTMLAttributes } from "react";
-
+import type { SkewImageProps } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
-interface SkewImageProps extends ImgHTMLAttributes<HTMLImageElement> {}
 
 /**
  * All the props are passed to the img element.
  */
-export default function SkewImage({ className, alt = 'Me' ,...props }: SkewImageProps) {
+const SkewImage = ({ className, alt = 'Me' ,...props }: SkewImageProps) => {
   return (
     <div
       className={
@@ -24,4 +22,7 @@ export default function SkewImage({ className, alt = 'Me' ,...props }: SkewImage
       />
     </div>
   );
-}
+};
+
+export default SkewImage;
+

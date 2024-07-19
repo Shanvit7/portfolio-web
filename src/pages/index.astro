@@ -1,52 +1,41 @@
 ---
 import BaseLayout from "@/layouts/baseLayout.astro";
-import GibberishText from "@/components/gibberish-text";
+import GibberishText from "@/components/text/gibberish-text";
 import SkewImage from "@/components/image/skew-image";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Front End Developer</title>
-  </head>
-  <body>
-    <BaseLayout>
-      <section class="bg-black h-screen w-full">
-        <div class="grid grid-cols-2 items-center py-8 justify-center gap-1">
-          <div class="justify-self-center relative z-50">
-            <SkewImage alt="Me" src="./me.jpg" />
-          </div>
-          <div>
-            <h1 class="py-4">
-              <GibberishText
-                className="text-3xl text-white"
-                text="Hi, I am Shanvit"
-                client:load
-              />
-            </h1>
-            <h5 class="text-lg">
-              <GibberishText
-                className="text-white"
-                text="I specialize in creating modern, user-friendly web interfaces"
-                client:load
-              />
-              <GibberishText
-                className="text-white"
-                text="that bridge the gap between design &"
-                client:load
-              />
-              <GibberishText
-                className="text-white"
-                text="functionality."
-                client:load
-              />
-            </h5>
-          </div>
-        </div>
-      </section>
-    </BaseLayout>
-  </body>
-</html>
+<BaseLayout>
+  <section class="bg-black h-screen w-full">
+    <div class="grid grid-cols-2 items-center py-8 justify-center gap-1">
+      <div class="justify-self-center relative z-30">
+        <SkewImage alt="Me" src="./me.jpg" />
+      </div>
+      <div>
+        <h1 class="py-4">
+          <GibberishText
+            className="text-3xl text-white"
+            text="Hi, I am Shanvit"
+            client:load
+          />
+        </h1>
+        <h5 class="text-lg">
+          <GibberishText
+            className="text-white"
+            text="I specialize in creating modern, user-friendly web interfaces"
+            client:load
+          />
+          <GibberishText
+            className="text-white"
+            text="that bridge the gap between design &"
+            client:load
+          />
+          <GibberishText
+            className="text-white"
+            text="functionality."
+            client:load
+          />
+        </h5>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

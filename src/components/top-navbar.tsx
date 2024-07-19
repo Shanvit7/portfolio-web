@@ -29,7 +29,7 @@ const TopNavbar = ({ tabs }: { tabs: string[] }) => {
   const [selected, setSelected] = useState<string>(tabs[0]);
 
   return (
-    <nav className="bg-black py-2">
+    <nav className="sticky top-0 left-0 bg-transparent z-50 py-2">
       <div className="flex flex-wrap items-center justify-center gap-4 mx-auto p-4 bg-white/10 rounded-lg shadow-lg w-1/2">
         {tabs.map((tab) => (
           <Tab
