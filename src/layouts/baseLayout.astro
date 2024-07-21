@@ -1,5 +1,6 @@
 ---
 import TopNavbar from "@/components/top-navbar";
+import Footer from "@/components/footer.astro";
 import BlurryBlob from "@/components/blurry-bob";
 import { TABS } from "@/lib/constants";
 ---
@@ -21,4 +22,5 @@ import { TABS } from "@/lib/constants";
     <TopNavbar tabs={TABS} client:load />
     <slot />
   </body>
+  <Footer />
 </html>
